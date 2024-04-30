@@ -115,7 +115,7 @@
                         <!-- QR code -->
                         <?php $stt+=1; ?>
                         <div class="col-12 QR_show" id="QR_show">
-                          <p><strong>商品名：</strong><?php echo $item['TenHang']; ?></p>
+                          <p class="text-break"><strong>商品名：</strong><?php echo $item['TenHang']; ?></p>
                           <div id="qrcode<?php echo $stt; ?>" class="d-flex align-items-end">
                             <script>
                               jQuery('#qrcode<?php echo $stt; ?>').qrcode({

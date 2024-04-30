@@ -6,7 +6,7 @@
             align-items: center;
             justify-content: center;
             color: chocolate;
-            background-color: antiquewhite;
+            background-color: var(--bg-color);
             }
     </style>
 

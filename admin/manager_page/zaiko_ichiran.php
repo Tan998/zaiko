@@ -31,9 +31,6 @@
         <script type="text/javascript" src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
         <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap5.min.css">
         <style>
-            body {
-                margin-bottom: 95px;
-            }
             .zaikosuu , .status{
                 font-size: 12px;
                 background-color: #f1f1f1;

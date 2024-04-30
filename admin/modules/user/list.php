@@ -49,12 +49,6 @@
     .form-delete a {
         font-size: 12px;
     }
-    body{
-        font-family: 'Noto Sans JP', sans-serif;
-        background-color: antiquewhite;
-        min-width: 310px;
-        min-height: 575px;
-      }
       div.dataTables_wrapper div.dt-row {
         overflow-x: auto;
       }

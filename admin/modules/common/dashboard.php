@@ -9,18 +9,13 @@ include_once('widgets/header.php'); ?>
                         header {
                             height: 80px;
                         }
-                        body {
-                            background-color: antiquewhite;
-                            min-width: 310px;
-                            min-height: 575px;
-                        }
                         .nav-item button{
                                 display: flex;
                                 flex-direction: column;
                                 align-items: center;
                         }
                         .nav-link span{
-                            color: black;
+                            color: var(--font-color);
                             font-size: 12px;
                         }
                         .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
@@ -46,7 +41,7 @@ include_once('widgets/header.php'); ?>
                             margin-bottom: 25px;
                             min-width: 310px;
                             overflow-x: auto;
-                            background-color: antiquewhite;
+                            background-color: var(--bg-color);
                             transition: transform 0.3s;
                         }
                         .nav_ul_style li {
@@ -56,10 +51,17 @@ include_once('widgets/header.php'); ?>
                             width: 100%;
                         }
                         .scroll-down .nav_ul_style {
-                          transform: translate3d(0, 100%, 0);
+                          transform: translate3d(0, 150%, 0);
                         }
 
                         .scroll-up .nav_ul_style {
+                          transform: none;
+                        }
+                        .scroll-down .footer {
+                          transform: translate3d(0, 100%, 0);
+                        }
+
+                        .scroll-up .footer {
                           transform: none;
                         }
                         i {
@@ -84,6 +86,9 @@ include_once('widgets/header.php'); ?>
                         #my_table2_wrapper {
                             padding: 0;
                         }
+                        .pb-6 {
+                                padding-bottom: 5rem !important;
+                        }
         </style>
     </head>
     <body>
@@ -92,43 +97,43 @@ include_once('widgets/header.php'); ?>
             <div class="text-end "><i class="bi bi-person-circle"></i>
                 <?php echo get_current_username(); ?>様ようこそ |
             </div>
-            <div class="container-fruid">
+            <div class="container-fruid mx-1">
                 <div class="tab-content" id="pills-tabContent">
-                        <div class="tab-pane container px-0 fade <?php echo_text("",""," show active") ?>" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+                        <div class="tab-pane container px-0 pb-6 fade <?php echo_text("",""," show active") ?>" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
                             <?php include('./manager_page/home_page.php'); ?>
                         </div>
-                        <div loading="lazy" class="tab-pane container-fruid px-0 fade" id="pills-zaiko" role="tabpanel" aria-labelledby="pills-zaiko-tab" tabindex="0">
+                        <div loading="lazy" class="tab-pane container-fruid px-0 pb-6 fade" id="pills-zaiko" role="tabpanel" aria-labelledby="pills-zaiko-tab" tabindex="0">
                             <?php include('./manager_page/zaiko_ichiran.php'); ?>
                         </div>
-                        <div loading="lazy" class="tab-pane container-fruid px-0 fade <?php echo_text(" show active","","") ?>" id="pills-nyuko" role="tabpanel" aria-labelledby="pills-nyuko-tab" tabindex="0">
+                        <div loading="lazy" class="tab-pane container-fruid px-0 pb-6 fade <?php echo_text(" show active","","") ?>" id="pills-nyuko" role="tabpanel" aria-labelledby="pills-nyuko-tab" tabindex="0">
                             <?php include('./manager_page/nyuko_ichiran.php'); ?>
                         </div>
-                        <div loading="lazy" class="tab-pane container-fruid px-0 fade <?php echo_text(""," show active","") ?>" id="pills-syukko" role="tabpanel" aria-labelledby="pills-syukko-tab" tabindex="0">
+                        <div loading="lazy" class="tab-pane container-fruid px-0 pb-6 fade <?php echo_text(""," show active","") ?>" id="pills-syukko" role="tabpanel" aria-labelledby="pills-syukko-tab" tabindex="0">
                             <?php include('./manager_page/syukko_ichiran.php'); ?>
                         </div>
                 </div>
             </div>
-                <ul class="nav_ul_style nav nav-pills fixed-bottom d-flex justify-content-around shadow-lg" id="pills-tab" role="tablist">
+                <ul class="nav_ul_style nav nav-pills fixed-bottom d-flex justify-content-around" id="pills-tab" role="tablist">
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link <?php echo_text("","","active") ?>" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="<?php echo_text("false","false","true") ?>">
+                        <button class="nav-link p-0 pt-1 <?php echo_text("","","active") ?>" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="<?php echo_text("false","false","true") ?>">
                             <i class="bi bi-house"></i>
                             <span>HOME</span>
                         </button>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="pills-zaiko-tab" data-bs-toggle="pill" data-bs-target="#pills-zaiko" type="button" role="tab" aria-controls="pills-zaiko" aria-selected="false">
+                        <button class="nav-link p-0 pt-1" id="pills-zaiko-tab" data-bs-toggle="pill" data-bs-target="#pills-zaiko" type="button" role="tab" aria-controls="pills-zaiko" aria-selected="false">
                             <i class="bi bi-card-checklist"></i>
                             <span>在庫一覧</span>
                         </button>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link <?php echo_text("active","","") ?>" id="pills-nyuko-tab" data-bs-toggle="pill" data-bs-target="#pills-nyuko" type="button" role="tab" aria-controls="pills-nyuko" aria-selected="<?php echo_text("true","","false") ?>">
+                        <button class="nav-link p-0 pt-1 <?php echo_text("active","","") ?>" id="pills-nyuko-tab" data-bs-toggle="pill" data-bs-target="#pills-nyuko" type="button" role="tab" aria-controls="pills-nyuko" aria-selected="<?php echo_text("true","","false") ?>">
                             <i class="bi bi-download"></i>
                             <span>入庫一覧</span>
                         </button>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link <?php echo_text("","active","") ?>" id="pills-syukko-tab" data-bs-toggle="pill" data-bs-target="#pills-syukko" type="button" role="tab" aria-controls="pills-syukko" aria-selected="<?php echo_text("","true","false") ?>">
+                        <button class="nav-link p-0 pt-1 <?php echo_text("","active","") ?>" id="pills-syukko-tab" data-bs-toggle="pill" data-bs-target="#pills-syukko" type="button" role="tab" aria-controls="pills-syukko" aria-selected="<?php echo_text("","true","false") ?>">
                             <i class="bi bi-upload"></i>
                             <span>出庫一覧</span>
                         </button>

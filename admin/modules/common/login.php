@@ -89,10 +89,10 @@ function update_session_id(){
                 <img class="" src="img/hb-logo1.png" alt="homebear logo">
             </div>-->
         <!--card-->
-        <img class="img-fluid" src="img/hb-logo1.svg" alt="homebear logo">
-          <div class="card shadow p-3 mb-5 rounded" style="margin-top: 10px;background: hsla(0, 0%, 100%, 0.8);backdrop-filter: blur(30px);">
+        <img class="img-fluid" src="img/bearロゴ.png" alt="homebear logo" style="width: 100%;">
+          <div class="card shadow p-3 mb-5" style="margin-top: 10px;background: hsla(0, 0%, 100%, 0.8);backdrop-filter: blur(30px); border-radius: 1rem;">
             
-            <div class="card-header"><h2>ログイン</h2></div>
+            <div class="card-header"><h3>ログイン</h3></div>
             <div class="card-body py-4 px-md-5">
               <form method="post" action="<?php echo base_url('admin/?m=common&a=login'); ?>">
                 <!-- username input -->

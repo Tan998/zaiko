@@ -66,7 +66,7 @@
   </nav>
   <div class="">
     <div class="text-end mb-2"><a class="btn btn-primary" href="<?php echo create_link(base_url('admin/index.php'), array('m' => 'check_inventory', 'a' => 'inventory_history')); ?>">棚卸履歴</a></div>
-    <div class="card text-center px-2 py-2">
+    <div class="card text-center px-2 py-2 border_radius_1">
       <!-- Camera Scan -->
       <div class="card-body">
         <h3 class="card-title">コードの読み込み</h3>
@@ -100,7 +100,7 @@
   </div>
 </div>
 
-<div class="container card my-2 mb-5">
+<div class="container card my-2 mb-5 border_radius_1">
   <form id="myform" class="my-3 row" action="" method="POST">
     <label for="bin_code_val" class="form-label mb-2">商品番号　</label>
     <div class="col-sm-6">

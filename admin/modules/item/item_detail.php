@@ -50,7 +50,7 @@ if($row){
 	    <li class="breadcrumb-item active" aria-current="page">商品詳細</li>
 	  </ol>
 	</nav>
-	<div class="row bg-light p-2">
+	<div class="row bg-light p-2 border_radius_1">
 		<div class="col-md-6 col-sm-5 p-4 border d-flex justify-content-center">
 			<img class="col-6 img-fluid" src="<?php echo $row['img_base64']?$row['img_base64'] : "img/no-photo.jpeg"; ?>" alt="">
 		</div>
@@ -102,8 +102,8 @@ else {
   <div class="card-body">
     <h1 class="card-title">商品なし</h1>
   </div>
-  <div class="text-center min-vh-100">
-  	<img style="max-width: 450px;" src="img/delivery.gif" class="card-img-bottom" alt="...">
+  <div class="d-flex justify-content-center min-vh-100">
+  	<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script><lottie-player src="img/gif/Animation-noitem.json" background="transparent" speed="1" style="width: 300px; height: 300px" direction="1" mode="normal" loop autoplay></lottie-player>
   </div>
 </div>
 <?php } ?>

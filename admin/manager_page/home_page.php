@@ -114,15 +114,38 @@
 					  </button>
 					  <ul class="dropdown-menu">
 					    <!-- Dropdown menu links -->
-					    <li><a class="dropdown-item" href="#"><i class="bi bi-gear"></i>　　設定</a></li>
+					    <li class="dropdown-item"><button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#setting-btn"><i class="bi bi-gear"></i>　　設定</button></li>
 					    <li><hr class="dropdown-divider"></li>
-					    <li><a class="dropdown-item" href="#"><i class="bi bi-info-circle"></i>　　情報</a></li>
+					    <li><button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#setting-btn2"><i class="bi bi-info-circle"></i>　　情報</button></li>
 					    <li><hr class="dropdown-divider"></li>
-					    <li><a class="dropdown-item" onclick="return confirm('ログアウトしますか？')" href="<?php echo base_url('admin/?m=common&a=logout'); ?>"><i class="bi bi-door-open"></i>　　ログアウト</a></li>
+					    <li><a class="dropdown-item" onclick="return confirm('ログアウトしますか？')" href="<?php echo base_url('admin/?m=common&a=logout'); ?>"><i class="bi bi-door-open"></i>　ログアウト</a></li>
+					    <li><hr class="dropdown-divider"></li>
+					    <li class="dropdown-item"></li>
 					  </ul>
 				</div>
 			</div>
 			<!-- Default dropup button -->
+			<!-- Modal -->
+			<div class="modal fade" id="setting-btn" data-bs-keyboard="false" tabindex="-1" aria-labelledby="setting-btnLabel" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered">
+				    <div class="modal-content">
+						<div class="modal-header">
+							<strong>設定</strong>
+						    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						</div>
+				     <div class="modal-body">
+				        <div class="d-flex flex-row align-items-center"><i class="bi bi-globe"></i>言語：<div class="gtranslate_wrapper"></div></div>
+				        <div class="d-flex flex-row align-items-center"><i class="bi bi-moon-stars"></i>ダークモード： 
+					        <div class="form-check form-switch">
+							  <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+							  <label class="form-check-label" for="flexSwitchCheckDefault"></label>
+							</div>
+						</div>
+				    </div>
+				</div>
+				</div>
+			</div>
 		</div>
+
 	</body>
 </html>

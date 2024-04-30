@@ -35,7 +35,7 @@ if (!is_logged()){
 	  </ol>
 	</nav>
 	<div class="">
-		<div class="card text-center px-2 py-2">
+		<div class="card text-center px-2 py-2 border_radius_1">
 			<!-- Camera Scan -->
 			<div class="card-body">
 				<h3 class="card-title">コードの読み込み</h3>

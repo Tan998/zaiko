@@ -46,11 +46,11 @@
                             ?>
 
                         <tr class="text-center">
-                            <td><?php echo $rows['bin_code']; ?></td>
-                            <td><?php echo $rows['TenHang']; ?></td>
+                            <td class="text-break"><?php echo $rows['bin_code']; ?></td>
+                            <td class="text-break"><?php echo $rows['TenHang']; ?></td>
                             <td><?php echo $rows['hokanbasho']; ?></td>
                             <td><?php echo $rows['joutai']; ?></td>
-                            <td><?php echo $rows['note']; ?></td>
+                            <td  class="text-break"><?php echo $rows['note']; ?></td>
                             <td><?php if($zaikosuu){echo $zaikosuu['TongSLTon'];} else {echo "0";} ?></td>
                             <?php } ?>
                         </tr>
