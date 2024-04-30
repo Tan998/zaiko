@@ -157,6 +157,17 @@
         .border_radius_1 {
             border-radius: 1rem;
         }
+        .loadding-front {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 100000;
+            background-color: antiquewhite;
+
+        }
     </style>
 </head>
 <body >
@@ -235,6 +246,17 @@ toggleSwitch.addEventListener("change", switchTheme, false);
         </nav>
         
         <?php } ?>
+<div class="loadding-front">
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+    <dotlottie-player src="https://lottie.host/efda02a1-3ab1-4eae-894b-749c7b955a61/kx5k9AsgFD.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></dotlottie-player>
+</div>
+<script>
+    setTimeout(() => {
+        const loadding_front = document.querySelector('.loadding-front');
+        loadding_front.style.display = 'none';
+    }, "2000")
+
+</script>
 <div id="page">
 <?php 
 if(is_logged()){check_login_dumlicate();}
